@@ -21,6 +21,10 @@ export class MovieService {
     return this.http.get(`${ENDPOINT}${path}count`);
   }
 
+  getMovieGenre(id: number) {
+    return this.http.get(`${ENDPOINT}movieGenre/get/${id}`);
+  }
+
 
   getMovieById(id: number) {
     return this.http.get(`${ENDPOINT}${path}get/${id}`);
