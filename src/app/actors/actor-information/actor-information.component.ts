@@ -3,13 +3,14 @@ import {ActivatedRoute} from "@angular/router";
 import {ActorService} from "../../services/actor.service";
 import {map, switchMap} from "rxjs";
 import {Actor} from "../../models/actor";
-import {NgForOf} from "@angular/common";
+import {NgForOf, NgIf} from "@angular/common";
 
 @Component({
   selector: 'app-actor-information',
   standalone: true,
   imports: [
-    NgForOf
+    NgForOf,
+    NgIf
   ],
   templateUrl: './actor-information.component.html',
   styleUrl: './actor-information.component.scss'
