@@ -1,1 +1,4 @@
-<p>search-result works!</p>
+<h1 class="text-2xl font-bold text-center w-full">Résultats : {{query}}</h1>
+<div class="flex flex-wrap justify-center mx-4 mt-5">
+  <app-movie-card *ngFor="let movie of movies" [movie]="movie" class="w-150 h-200 mx-2 my-2"></app-movie-card>
+</div>

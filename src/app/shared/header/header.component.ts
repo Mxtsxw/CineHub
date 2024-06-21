@@ -2,13 +2,15 @@ import { Component } from '@angular/core';
 import {Router, RouterLink} from "@angular/router";
 import {NgIf} from "@angular/common";
 import {AuthService} from "../../services/auth.service";
+import {FormsModule, NgForm} from "@angular/forms";
 
 @Component({
   selector: 'app-header',
   standalone: true,
   imports: [
     RouterLink,
-    NgIf
+    NgIf,
+    FormsModule
   ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
@@ -21,6 +23,12 @@ export class HeaderComponent {
   logout() {
     this.authService.logout();
     this.router.navigate(['/login']);
+  }
+
+  searchSubmit(query: string) {
+    if (query) {
+      this.router.navigate(['/search', {query: query}]);
+    }
   }
 
 }

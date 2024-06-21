@@ -6,10 +6,10 @@
       <div>
         <p *ngIf="actor?.gender" class="mt-2 font-bold">Genre</p>
         <p class="mt-2 ">{{ actor?.gender === 1 ? "Femme" : "Homme" }}</p>
-        <p *ngIf="actor?.birthdate" class="mt-2 font-bold">Date de naissance</p>
-        <p class="mt-2 ">{{ actor?.birthdate }}</p>
-        <p *ngIf="actor?.deathdate" class="mt-2 font-bold">Date de décès</p>
-        <p class="mt-2 ">{{ actor?.deathdate }}</p>
+        <p *ngIf="actor?.birthday" class="mt-2 font-bold">Date de naissance</p>
+        <p class="mt-2 ">{{ actor?.birthday }}</p>
+        <p *ngIf="actor?.deathday" class="mt-2 font-bold">Date de décès</p>
+        <p class="mt-2 ">{{ actor?.deathday }}</p>
         <p *ngIf="actor?.placeOfBirth" class="mt-2 font-bold">Lieu de naissance</p>
         <p class="mt-2 ">{{ actor?.placeOfBirth }}</p>
 
