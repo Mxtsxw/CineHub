@@ -28,6 +28,7 @@ export class ActorInformationComponent implements OnInit{
       map(params => params['id']),
       switchMap(id => this.actorService.getActorById(id))
     ).subscribe((actor: any) => {
+      console.log(actor)
       this.actor = actor;
     });
   }

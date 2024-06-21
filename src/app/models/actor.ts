@@ -2,8 +2,8 @@ export interface Actor {
   id: number
   gender: number
   name: string
-  birthdate: string
-  deathdate: string
+  birthday: string
+  deathday: string
   placeOfBirth: string
   profilePath: string
   biography: string
