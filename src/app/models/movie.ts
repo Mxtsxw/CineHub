@@ -5,7 +5,9 @@ export interface Movie {
   releaseDate:string;
   posterPath:string;
   backdropPath:string;
-  director_id:number;
+  popularity:number;
+  director:string;
   overview: string;
+  budget:number;
   characters:string[]
 }
