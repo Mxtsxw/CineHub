@@ -7,6 +7,7 @@ import {LoginComponent} from "./auth/login/login.component";
 import {MovieInformationComponent} from "./movies/movie-information/movie-information.component";
 import {MoviesComponent} from "./movies/movies.component";
 import {authGuard} from "./services/guard/auth.guard";
+import {AdminComponent} from "./admin/admin.component";
 
 export const routes: Routes = [
   { path: '', component: HomeComponent, title: 'CineHub'},
@@ -16,5 +17,6 @@ export const routes: Routes = [
   { path: 'movie/:id', component: MovieInformationComponent, title: 'Movie Information', canActivate: [authGuard]},
   { path: 'actors', component: ActorsComponent, title: 'Actors', canActivate: [authGuard]},
   { path: 'actor/:id', component: ActorInformationComponent, title: 'Actor Information', canActivate: [authGuard]},
-  { path: '**', redirectTo: '' }  // Redirect to home for any unknown routes
+  { path: '**', redirectTo: '' } , // Redirect to home for any unknown routes
+  { path: 'admin', component: AdminComponent, title: 'Admin', canActivate: [authGuard]},
 ];
