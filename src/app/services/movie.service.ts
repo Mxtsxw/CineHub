@@ -24,6 +24,7 @@ export class MovieService {
 
   getMovieById(id: number) {
     return this.http.get(`${ENDPOINT}${path}get/${id}`);
+  }
 
   search(query: string) {
     return this.http.get(`${ENDPOINT}${path}search?query=${query}`);
