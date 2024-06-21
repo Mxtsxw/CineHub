@@ -1,5 +1,5 @@
 <div routerLink="/actor/{{actor.id}}" class="max-w-sm rounded overflow-hidden shadow-lg h-full cursor-pointer hover:shadow-xl">
-  <img class="w-full" [src]="actor.profilePath" alt="{{ actor.name }}">
+  <img class="w-full" src="https://image.tmdb.org/t/p/original/{{ actor.profilePath }}" alt="{{ actor.name }}">
   <div class="px-6 py-4">
     <div class="font-bold text-xl mb-2">{{ actor.name }}</div>
     <p class="text-gray-700 text-base truncate">
