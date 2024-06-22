@@ -3,6 +3,6 @@ export interface Character {
   gender: number;
   name: string;
   profilePath: string;
-  actor: string;
-  movie: string;
+  actorId: string;
+  movieId: string;
 }

@@ -18,6 +18,7 @@ export const routes: Routes = [
   { path: 'actors', component: ActorsComponent, title: 'Actors', canActivate: [authGuard]},
   { path: 'actor/:id', component: ActorInformationComponent, title: 'Actor Information', canActivate: [authGuard]},
   { path: 'admin', component: AdminComponent, title: 'Admin', canActivate: [authGuard]},
+  { path: 'character/delete/:id', component: AdminComponent, title: 'Admin', canActivate: [authGuard]},
   { path: '**', redirectTo: '' } , // Redirect to home for any unknown routes
 
 ];

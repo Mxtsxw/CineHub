@@ -14,6 +14,9 @@ export class CharacterService {
   getCharacters() {
     return this.http.get(`${ENDPOINT}${path}getAll`);
   }
+  deleteCharacter(id:number) {
+    return this.http.get(`${ENDPOINT}${path}delete/${id}`);
+  }
   getCharById(id: number) {
     return this.http.get(`${ENDPOINT}${path}get/${id}`);
   }
