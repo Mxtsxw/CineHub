@@ -1,5 +1,5 @@
+<mat-paginator [length]="totalItems" [pageSize]="pageSize" [pageIndex]="currentPage" (page)="pageChanged($event)"></mat-paginator>
 <div class="flex flex-wrap justify-center mx-4 mt-5">
   <app-actor-card *ngFor="let actor of actors" [actor]="actor" class="w-80 h-200 mx-2 my-2"></app-actor-card>
 </div>
 
-<mat-paginator [length]="totalItems" [pageSize]="pageSize" [pageIndex]="currentPage" (page)="pageChanged($event)"></mat-paginator>
