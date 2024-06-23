@@ -2,7 +2,7 @@
   <div class="flex">
     <!-- Actor Image -->
     <div class="flex-shrink-0">
-      <img class="w-48 h-auto rounded-lg" [src]="actor?.profilePath" alt="{{ actor?.name }}">
+      <img class="w-48 h-auto rounded-lg" src="https://image.tmdb.org/t/p/original/{{actor?.profilePath}}}" alt="{{ actor?.name }}">
       <div>
         <p *ngIf="actor?.gender" class="mt-2 font-bold">Genre</p>
         <p class="mt-2 ">{{ actor?.gender === 1 ? "Femme" : "Homme" }}</p>

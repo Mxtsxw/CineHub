@@ -7,7 +7,7 @@
       </a>
     </div>
     <div class="flex gap-x-12">
-      <a routerLink="/admin" class="text-sm font-semibold leading-6 text-red-900">Administration</a>
+      <a *ngIf="this.authService.isAuthenticated()" routerLink="/admin" class="text-sm font-semibold leading-6 text-red-900">Administration</a>
       <a routerLink="/movies" class="text-sm font-semibold leading-6 text-gray-900">Films</a>
       <a routerLink="/actors" class="text-sm font-semibold leading-6 text-gray-900">Acteurs</a>
     </div>

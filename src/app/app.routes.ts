@@ -10,7 +10,6 @@ import {authGuard} from "./services/guard/auth.guard";
 import {AdminComponent} from "./admin/admin.component";
 
 export const routes: Routes = [
-  { path: '', component: HomeComponent, title: 'CineHub'},
   { path: 'login', component: LoginComponent, title: 'Login'},
   { path: 'search', component: SearchResultComponent, title: 'Search', canActivate: [authGuard]},
   { path: 'movies', component: MoviesComponent, title: 'Movies', canActivate: [authGuard]},
@@ -19,6 +18,6 @@ export const routes: Routes = [
   { path: 'actor/:id', component: ActorInformationComponent, title: 'Actor Information', canActivate: [authGuard]},
   { path: 'admin', component: AdminComponent, title: 'Admin', canActivate: [authGuard]},
   { path: 'character/delete/:id', component: AdminComponent, title: 'Admin', canActivate: [authGuard]},
-  { path: '**', redirectTo: '' } , // Redirect to home for any unknown routes
+  { path: '**', redirectTo: 'movies' } , // Redirect to home for any unknown routes
 
 ];
