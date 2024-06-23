@@ -11,13 +11,17 @@ const path = 'character/';
 export class CharacterService {
 
   constructor(private http: HttpClient) { }
-  getCharacters() {
-    return this.http.get(`${ENDPOINT}${path}getAll`);
+  getCharacters(page: number, pageSize: number) {
+    return this.http.get(`${ENDPOINT}${path}get?pageNumber=${page}&pageSize=${pageSize}`);
   }
   deleteCharacter(id:number) {
-    return this.http.get(`${ENDPOINT}${path}delete/${id}`);
+    return this.http.delete(`${ENDPOINT}${path}delete/${id}`);
   }
   getCharById(id: number) {
     return this.http.get(`${ENDPOINT}${path}get/${id}`);
+  }
+
+  getCharactersCount() {
+    return this.http.get(`${ENDPOINT}${path}count`);
   }
 }
